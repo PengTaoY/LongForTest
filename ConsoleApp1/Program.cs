@@ -14,8 +14,8 @@ namespace ConsoleApp1
 
             HttpDownloadFile(@"http://risk.longfor.sit/file/download/noauth/138aa91f-d6dc-4e16-b056-756f6f1c69093", @"D:\123", true);
             HttpDownloadFile(@"http://risk.longfor.sit/file/download/noauth/02972f75-ded6-4061-9b1a-f2e4c8cd38b5", @"D:\123", true);
-            //HttpDownloadFile(@"https://www.cnblogs.com/images/logo_small.gif", @"D:\123", true);
-            //HttpDownloadFile(@"http://risk.longfor.sit/file/download/noauth/f33b1abf-b17d-4819-97ac-94f01481a52a", @"D:\123", true);
+            HttpDownloadFile(@"https://www.cnblogs.com/images/logo_small.gif", @"D:\123", true);
+            HttpDownloadFile(@"http://risk.longfor.sit/file/download/noauth/f33b1abf-b17d-4819-97ac-94f01481a52a", @"D:\123", true);
 
             Console.WriteLine("Hello World!");
         }
@@ -71,17 +71,17 @@ namespace ConsoleApp1
                 }
             }
 
-            DeleteFile(path, Path.Combine(path, fileName));
+           // DeleteFile(path, Path.Combine(path, fileName));
 
         }
 
         private static MemoryStream StreamToMemoryStream(Stream stream)
         {
             MemoryStream ms = new MemoryStream();
-            byte[] buffer = new byte[1024];
-
+           
             while (true)
             {
+                byte[] buffer = new byte[1024];
                 int sz = stream.Read(buffer, 0, 1024);
                 if (sz == 0) break;
                 ms.Write(buffer, 0, sz);
