@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace ConsoleApp3
+namespace ForEachDemo
 {
     class Program
     {

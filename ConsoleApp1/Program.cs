@@ -5,7 +5,7 @@ using System.Net;
 using System.Net.Mime;
 using System.Web;
 
-namespace ConsoleApp1
+namespace HttpDownloadDemo
 {
     class Program
     {
